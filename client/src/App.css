@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.App{
+  overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(320deg,#f27121,#e94057,#8a2387);
+}
+.container{
+  z-index: 100;
+  position: relative;
+  text-align: center;
+  flex-direction: column;
+  line-height: 2rem;
+  padding: 2rem 0;
+  background: rgba(255, 255, 255, 0.1) ;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.43);
+  color: #fff;
+  margin: 1rem 15rem;
+}
+h1{
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: .5rem;
+}
+button{
+  background-color: rgba(64, 43, 226, 0.642);
+    border-radius: 100px;
+    box-shadow: rgba(68, 44, 187, 0.2) 0 -25px 18px -14px inset,
+      rgba(61, 44, 187, 0.15) 0 1px 2px, rgba(56, 44, 187, 0.15) 0 2px 4px,
+      rgba(53, 44, 187, 0.15) 0 4px 8px, rgba(84, 44, 187, 0.15) 0 8px 16px,
+      rgba(75, 44, 187, 0.15) 0 16px 32px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 23px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 1.2rem;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 0 1.2rem;
+}
+button:hover{
+  box-shadow: rgba(68, 44, 187, 0.2) 0 -25px 18px -14px inset,
+        rgba(61, 44, 187, 0.15) 0 1px 2px, rgba(56, 44, 187, 0.15) 0 2px 4px,
+        rgba(53, 44, 187, 0.15) 0 4px 8px, rgba(84, 44, 187, 0.15) 0 8px 16px,
+        rgba(75, 44, 187, 0.15) 0 16px 32px;
+      transform: scale(1.05) ;
+}
+
+.box{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+#box1{
+  animation: MoveUpDown 4s linear infinite;
+}
+#box2{
+  animation: MoveUpDown 7s linear infinite;
+}
+#box3{
+  animation: MoveUpDown 3s linear infinite;
+}
+#box4{
+  animation: MoveUpDown 6s linear infinite;
+}
+#box5{
+  animation: MoveUpDown 5s linear infinite;
+}
+
+.input-container{
+  position: relative;
+  border-bottom: 1px solid #fff;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  margin-left:  15rem;
+  margin-right: 15rem;
+  margin-top: 1rem;
+}
+.input-container input {
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  height: 50px;
+  padding: 0 5px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.input-container label {
+  position: absolute;
+  top: 40%;
+  left: 14px;
+  font-size: 1.2rem;
+  pointer-events: none;
+  color: #fff;
+  transform: translateY(-50%);
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+  top: -12px;
+  transform: scale(1);
+  left: 0;
+  color: #fff;
+}
+
+.content{
+  margin: 2rem 0rem;
+}
+
+h2{
+  font-size: 1.8rem;
+  font-weight: boldk;
+  margin-bottom: .5rem;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(75px);
+  }
+}
